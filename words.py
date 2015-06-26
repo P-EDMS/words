@@ -20,35 +20,48 @@ and print_top() functions which you write.
 import sys
 import re
 import os.path
-import timeit
+import time
 
 
 def scan(filename):
   input_file = open(filename, 'rU')
-  word_list = []
-
-
-
+  
+  #dict is choosen over list, O(1) for read.
+  word_list = {}
+  start = time.time()
+  #by EOF, we should be able to received a bunch of words
   for line in input_file:
     filter(line.lower(), word_list)
+  end = time.time()
+
+  input_file.close()
 
   print sorted(word_list), len(word_list)
+  print "scan&filter: %f" % (end - start)
+
+
+
+""" 
+
+1. remove whitespaces & punctuation marks.
+2. look from database
+	2.1 reserved words
+	2.2 existing words
+
+  
+"""
 
 def filter(line, word_list):
-
-
   words = re.findall(r'[^\s\W]+[\'\w]+', line)
   for word in words:
     if word not in word_list:
-      word_list.append(word)
+      word_list.update({word: 0})
 
 def main():
-
   if len(sys.argv) < 2:
     print 'usage: ./indexing.py file'
     sys.exit(1)
 	
-
   filename = sys.argv[1]
 
   if not os.path.isfile(filename):
@@ -59,6 +72,11 @@ def main():
 
 
 if __name__ == '__main__':
+  start = time.time()
   main()
+  end = time.time()
+  print "whole program: %f" % (end - start)
+
+
 
 
