@@ -23,3 +23,20 @@ It's easier to lock down the problem when we break the entire process down into 
 4. Indexing (store words & link it to file)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##References:
+[1] Russ Cox, "Regular Expression Matching Can Be Simple And Fast", https://swtch.com/~rsc/regexp/regexp1.html, 2007
+
