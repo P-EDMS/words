@@ -9,25 +9,63 @@ This is to document down a potential solution to improve the efficiency of full-
 - Integration with Panton Node structure.
 
 ##Strategy:
-It's easier to lock down the problem when we break the entire process down into modular pieces. 
+It's easier to lock down the problem when we decompose a complex process into simple modular tasks. 
 
-1. Time it to obtain average run-time of each module.
+1. Time it & benchmark to obtain average run-time of each module.
 2. Design in a way that modules could run in parallels. (we need to resolve the communications between modules)
 3. Optimization in terms of space vs. time complexity of each module.
 4. Utilization of CPU processing.   
 
 ##Modules:
 1. File-Reading
-2. Tokenization
-3. Filter (puntuations & reserved words & indexed words)
+2. Tokenization(punctuation marks)
+3. Filter (reserved words & indexed words)
 4. Indexing (store words & link it to file)
 
 
 
+##Tokenization:
+
+Tokenization is to recognize & extract words out of a stream of characters (string). The definition of `word` is a single distinct meaningful element which collectively forms a sentence, that is often seperated by space or punctuation marks.
+
+In computer representation:
+- space = {\n, \t, \r} 
+- punctuation marks = {!, @, #, $, %, ... , : }   
+
+
+###Analysis:
+
+This section is to note down the possible complexity of this module in terms of time and space.
+
+- O(n). Linear-time algoritm.
+
+To get words out of a sentence, we need to go through each of the character in that stream of character, preferably in a single pass. 
+
+
+###Pseudocode:
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 
 
 
