@@ -12,10 +12,14 @@ This is to document down a potential solution to improve the efficiency of full-
 It's easier to lock down the problem when we break the entire process down into modular pieces. 
 
 1. Time it to obtain average run-time of each module.
-2. Design in a way that modules could run in parallels.   
+2. Design in a way that modules could run in parallels. (we need to resolve the communications between modules)
+3. Optimization in terms of space vs. time complexity of each module.
+4. Utilization of CPU processing.   
 
 ##Modules:
 1. File-Reading
-2. 
+2. Tokenization
+3. Filter (puntuations & reserved words & indexed words)
+4. Indexing (store words & link it to file)
 
 
