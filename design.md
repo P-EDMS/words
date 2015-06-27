@@ -94,3 +94,5 @@ To get words out of a sentence, its unavoidable that we need to go through each 
 ##References:
 [1] Russ Cox, "Regular Expression Matching Can Be Simple And Fast", https://swtch.com/~rsc/regexp/regexp1.html, 2007
 [2] Ugo Scaiella, "Improving regex preformance on JVM", http://blog.spaziodati.eu/en/2014/11/07/improving-regex-performance-on-java-virtual-machine-jvm/, 2014
+[3] Stackoverflow, "Speed up a single task using multi-processing or threading", http://goo.gl/DXcybN, 2013
+[4] Michael Cvet, "Parallel MapReduce in Python in Ten Minutes", https://mikecvet.wordpress.com/2010/07/02/parallel-mapreduce-in-python/, 2010
