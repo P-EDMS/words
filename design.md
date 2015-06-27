@@ -7,6 +7,7 @@ This is to document down a potential solution to improve the efficiency of full-
 ##What's not covered in this spec:
 - Database optimization based on read/write ratio.
 - Integration with Panton Node structure.
+- Non-ASCII file.
 
 ##Strategy:
 It's easier to lock down the problem when we decompose a complex process into simple modular tasks. 
@@ -22,7 +23,18 @@ It's easier to lock down the problem when we decompose a complex process into si
 3. Filter (reserved words & indexed words)
 4. Indexing (store words & link it to file)
 
+##File-Reading  
 
+This is the starting process of full-text-indexing. File reading is a process of opening a file and read its content out to application memory for manipulation. There are many file-reading techniques,  each of it will be discussed in details at later section.
+
+###Analysis
+
+-File.Read()
+-File.Read(b_size)
+-File.ReadLine()
+-File.ReadList()
+
+ 
 
 ##Tokenization:
 
@@ -33,17 +45,21 @@ In computer representation:
 - punctuation marks = {!, @, #, $, %, ... , : }   
 
 
+
+###Psedocode:
+
+Consider the following psedocode:
+
+
+
+
 ###Analysis:
 
-This section is to note down the possible complexity of this module in terms of time and space.
+This section is to note down the possible complexity of this module in terms of time and space. Notably for tokenization module, the focus is rather on time complexity.
 
-- O(n). Linear-time algoritm.
+- O(n). Linear-time algorithm. 
 
-To get words out of a sentence, we need to go through each of the character in that stream of character, preferably in a single pass. 
-
-
-###Pseudocode:
-
+To get words out of a sentence, its unavoidable that we need to go through each and every character in that stream of characters, and it could be done in single pass.
 
 
 
@@ -77,4 +93,4 @@ To get words out of a sentence, we need to go through each of the character in t
 
 ##References:
 [1] Russ Cox, "Regular Expression Matching Can Be Simple And Fast", https://swtch.com/~rsc/regexp/regexp1.html, 2007
-
+[2] Ugo Scaiella, "Improving regex preformance on JVM", http://blog.spaziodati.eu/en/2014/11/07/improving-regex-performance-on-java-virtual-machine-jvm/, 2014
