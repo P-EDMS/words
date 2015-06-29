@@ -19,7 +19,7 @@ It's easier to lock down the problem when we decompose a complex process into si
 
 ##Modules:
 1. File-Reading
-2. Tokenization(punctuation marks)
+2. Sanitization(punctuation marks)
 3. Filter (reserved words & indexed words)
 4. Indexing (store words & link it to file)
 
@@ -37,10 +37,8 @@ An assessment of the performance of several methods:
 
 
 **Method 2:** 
-File.Read(b_size)
--File.ReadLine()
--File.ReadList()
 
+-File.ReadLine()
  
 
 ##Tokenization:
@@ -99,10 +97,12 @@ To get words out of a sentence, we have to scan each and every character in that
 
 
 ##Future improvements:
-Key-phrase indexing, indexing with context, for an example:
+1. Key-phrase indexing, indexing with context, for an example:
 
 Obesity -> overweight  	
 
+
+2. Improve performance.
 
 ##References:
 [1] Russ Cox, "Regular Expression Matching Can Be Simple And Fast", https://swtch.com/~rsc/regexp/regexp1.html, 2007
