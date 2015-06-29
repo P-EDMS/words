@@ -102,15 +102,28 @@ To get words out of a sentence, we have to scan each and every character in that
 Obesity -> overweight  	
 
 
-2. Improve performance.
+2. Improve performance. How do we boost up the performance by using:
+- multi-threading. Not with Python, especially it has GIL.
+- multi-process (CPU cores).
+- caching
+
+
 
 ##References:
-[1] Russ Cox, "Regular Expression Matching Can Be Simple And Fast", https://swtch.com/~rsc/regexp/regexp1.html, 2007
-[2] Ugo Scaiella, "Improving regex preformance on JVM", http://blog.spaziodati.eu/en/2014/11/07/improving-regex-performance-on-java-virtual-machine-jvm/, 2014
-[3] Stackoverflow, "Speed up a single task using multi-processing or threading", http://goo.gl/DXcybN, 2013
+[1] Russ Cox, "Regular Expression Matching Can Be Simple And Fast", https://swtch.com/~rsc/regexp/regexp1.html, 2007.
+
+[2] Ugo Scaiella, "Improving regex preformance on JVM", http://blog.spaziodati.eu/en/2014/11/07/improving-regex-performance-on-java-virtual-machine-jvm/, 2014.
+
+[3] Stackoverflow, "Speed up a single task using multi-processing or threading", http://goo.gl/DXcybN, 2013.
+
 [4] Michael Cvet, "Parallel MapReduce in Python in Ten Minutes", https://mikecvet.wordpress.com/2010/07/02/parallel-mapreduce-in-python/, 2010
+
 [5] Alyona (Olena) Medelyan, "Key Phrase Indexing With Controlled Vocabularies", youtube.
+
 [6] Alyona Medelyan, "Semantically Enhanced Automatic Keyphrase Indexing", 2006
+
 [7] https://www.simple-talk.com/sql/learn-sql-server/understanding-full-text-indexing-in-sql-server/
+
 [8] http://stackoverflow.com/questions/3055477/how-slow-is-pythons-string-concatenation-vs-str-join
+
 [9]  "Efficient String Concatenation in Python", https://waymoot.org/home/python_string/	
