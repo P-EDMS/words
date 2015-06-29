@@ -103,9 +103,10 @@ Obesity -> overweight
 
 
 2. Improve performance. How do we boost up the performance by using:
-- multi-threading. Not with Python, especially it has GIL.
-- multi-process (CPU cores).
-- caching
+ 
+ - multi-threading. Not with Python, especially it has GIL.
+ - multi-process (CPU cores).
+ - caching
 
 
 
